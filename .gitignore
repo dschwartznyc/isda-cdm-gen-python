@@ -3,3 +3,4 @@ runtime/.pyenv
 rosetta_runtime.egg-info
 python_cdm.egg-info
 test/serialization/__pycache__
+.DS_Store
