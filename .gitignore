@@ -1,0 +1,5 @@
+test/testenv
+runtime/.pyenv
+rosetta_runtime.egg-info
+python_cdm.egg-info
+test/serialization/__pycache__
