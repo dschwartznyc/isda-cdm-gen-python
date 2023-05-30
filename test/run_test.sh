@@ -23,6 +23,6 @@ source testenv/$ACDIR/activate
 $PYEXE -m pip install pytest
 $PYEXE -m pip install $MYPATH/$ROSETTARUNTIMEDIR/rosetta_runtime-1.0.0-py3-none-any.whl 
 $PYEXE -m pip install $MYPATH/$PYTHONCDMDIR/$VERSION/python_cdm-0.0.0-py3-none-any.whl
-$PYEXE serialization/test_identifier.py
-$PYEXE serialization/test_party.py
+$PYEXE serialization/test_identifier.py $VERSION
+$PYEXE serialization/test_party.py $VERSION
 $PYEXE serialization/test_trade_state_product.py $VERSION

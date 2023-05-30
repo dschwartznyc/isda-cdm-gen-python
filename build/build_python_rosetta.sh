@@ -24,8 +24,8 @@ ACDIR=$($PYEXE -c "import sys;print('Scripts' if sys.platform.startswith('win') 
 MYPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ROSETTARUNTIMEDIR=$MYPATH/"../runtime"
 PYTHONSOURCEDIR=$MYPATH/"../target/python"
-VERSION="4_0_0"
-cd $PYTHONSOURCEDIR
+VERSION="4_0_0" #or "3_3_2"
+cd $PYTHONSOURCEDIR/$VERSION
 $PYEXE -m venv --clear .pyenv || processError
 source .pyenv/$ACDIR/activate || processError
 $PYEXE -m pip install --upgrade pip || processError

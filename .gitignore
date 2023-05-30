@@ -6,3 +6,4 @@ test/serialization/__pycache__
 .DS_Store
 target/python/.pyenv/
 target/python/build/
+target/python/4_0_0/.pyenv/
