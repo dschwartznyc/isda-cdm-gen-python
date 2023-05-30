@@ -22,8 +22,9 @@ fi
 ACDIR=$($PYEXE -c "import sys;print('Scripts' if sys.platform.startswith('win') else 'bin')")
 
 MYPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-ROSETTARUNTIMEDIR=$MYPATH/"../src/main/resources/runtime"
+ROSETTARUNTIMEDIR=$MYPATH/"../runtime"
 PYTHONSOURCEDIR=$MYPATH/"../target/python"
+VERSION="4_0_0"
 cd $PYTHONSOURCEDIR
 $PYEXE -m venv --clear .pyenv || processError
 source .pyenv/$ACDIR/activate || processError
@@ -34,9 +35,9 @@ $PYEXE -m pip install jsonpickle || processError
 $PYEXE -m pip install $ROSETTARUNTIMEDIR/rosetta_runtime-1.0.0-py3-none-any.whl || processError
 
 rm -rf build
-rm python_cdm-3.3.2-py3-none-any.whl
 $PYEXE -m pip wheel --no-deps --only-binary :all: . || processError
 rm -rf build
+mv python_cdm-0.0.0-py3-none-any.whl ./$VERSION/
 echo ""
 echo ""
 echo "***************************************************************************"

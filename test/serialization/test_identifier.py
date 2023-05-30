@@ -5,8 +5,9 @@ dirPath = os.path.dirname(__file__)
 sys.path.append(os.path.join(dirPath))
 from cdm_comparison_test import cdm_comparison_test_from_file
 
-def test_identifier ():
-	cdm_comparison_test_from_file(dirPath + '/cdm_samples_3_3_2/expected_Identifier.json', Identifier)
+def test_identifier (version):
+	cdm_comparison_test_from_file(dirPath + '/cdm_samples/' + version + '/expected_Identifier.json', Identifier)
 
 if __name__ == "__main__":
-	test_identifier()
+	version = sys.argv[1] if len(sys.argv) > 1 else '3_3_2'
+	test_identifier(version)
