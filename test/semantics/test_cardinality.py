@@ -1,7 +1,7 @@
 import pytest
 import datetime
 from cdm.base.datetime.DateList import DateList
-from cdm.utils import ConditionViolationError
+from rosetta.runtime.utils import ConditionViolationError
 
 
 def test_1_many_fail():
@@ -22,8 +22,11 @@ def test_1_many_pass():
 
 
 if __name__ == "__main__":
+	print("first one")
 	test_1_many_pass()
+	print("second one")
 	test_1_many_fail()
+	print("third one")
 	test_1_many_fail_nopar()
 	
 

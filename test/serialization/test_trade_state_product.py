@@ -6,7 +6,7 @@ import sys,os
 
 from cdm_comparison_test import cdm_comparison_test_from_file
 
-def test_trade_state (version):
+def test_trade_state (version="4_0_0"):
 	dirPath = os.path.dirname(__file__)
 	sys.path.append(os.path.join(dirPath))
 	cdm_comparison_test_from_file (dirPath + '/cdm_samples/' + version + '/EUR-Vanilla-account.json', TradeState)

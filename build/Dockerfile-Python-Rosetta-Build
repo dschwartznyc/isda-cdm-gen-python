@@ -11,6 +11,12 @@ RUN python3 -m pip install jsonpickle
 RUN python3 -m pip install rosetta_runtime-1.0.0-py3-none-any.whl
 WORKDIR /opt/isda-cdm-code-gen/python
 RUN python3 -m pip wheel --no-deps --only-binary :all: .
+COPY test /opt/isda-cdm-code-gen/python/test
+RUN python3 -m pip install pytest
+WORKDIR /opt/isda-cdm-code-gen/python/test
+RUN pytest --ignore=utils
+
+
 
 # to build (from root directory)
 # docker build -f ./build/Dockerfile-Python-Rosetta-Build -t python-gen .
