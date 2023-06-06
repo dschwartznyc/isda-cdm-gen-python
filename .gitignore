@@ -8,3 +8,4 @@ target/python/.pyenv/
 target/python/build/
 target/python/4_0_0/.pyenv/
 *.pyc
+target/python/4_0_0/build
