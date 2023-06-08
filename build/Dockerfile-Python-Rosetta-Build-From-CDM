@@ -23,4 +23,15 @@ RUN pytest --ignore=utils
 # docker run --rm -it --mount type=bind,source=/Users/dls/projects/common-domain-model/rosetta-source/target/classes/cdm/python,target=/mnt --entrypoint sh python:3.10-alpine
 # docker run --rm -it --mount type=bind,source=/Users/dls/projects/isda-cdm-code-gen/python/target/python,target=/mnt --entrypoint sh python:3.10-alpine
 # docker run --rm -it --mount type=bind,source=/Users/dls/projects/isda-cdm-code-gen/python/,target=/mnt --entrypoint sh python:3.10-alpine
-# docker run --rm -it --entrypoint sh python:3.10-alpine
+
+# to test
+# in code gen, for python
+# maven clean install 
+# in common-domain-model
+# copy tests to main/resources
+# maven clean install -DskipTests -P python
+# lauch docker with mount pointing at directory that contains the generated python, rosetta runtime and tests 
+# pip the packages, build the wheel
+# pip pytest
+# cd test
+# pytest --ignore=utils
