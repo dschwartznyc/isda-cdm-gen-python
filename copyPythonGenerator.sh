@@ -1,0 +1,2 @@
+cp /Users/dls/.m2/repository/com/regnosys/rosetta/code-generators/python/0.0.0.master/python-0.0.0.master.jar /Users/dls/.m2/repository/com/regnosys/rosetta/code-generators/python/6.6.0/python-6.6.0.jar
+cp /Users/dls/.m2/repository/com/regnosys/rosetta/code-generators/python/0.0.0.master/python-0.0.0.master.pom /Users/dls/.m2/repository/com/regnosys/rosetta/code-generators/python/6.6.0/python-6.6.0.pom

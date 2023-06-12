@@ -21,6 +21,7 @@ RUN pytest --ignore=utils
 # docker run -i -t python-gen bash              
 # to mimic codefresh
 # docker run --rm -it --mount type=bind,source=/Users/dls/projects/common-domain-model/rosetta-source/target/classes/cdm/python,target=/mnt --entrypoint sh python:3.10-alpine
+# docker run --rm -it --mount type=bind,source=/Users/dls/projects/common-domain-model/,target=/mnt --entrypoint sh python:3.10-alpine
 # docker run --rm -it --mount type=bind,source=/Users/dls/projects/isda-cdm-code-gen/python/target/python,target=/mnt --entrypoint sh python:3.10-alpine
 # docker run --rm -it --mount type=bind,source=/Users/dls/projects/isda-cdm-code-gen/python/,target=/mnt --entrypoint sh python:3.10-alpine
 
